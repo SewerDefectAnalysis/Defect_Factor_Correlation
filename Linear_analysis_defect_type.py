@@ -861,7 +861,7 @@ def plot_top_type_defects(
                         if use_grey
                         else base_color
                     ),
-                    label=f"<{low_n_threshold} pipes"
+                    label=f"Not representative (less than {low_n_threshold} pipes)"
                 )
 
             # Plot groups meeting the sample-size threshold

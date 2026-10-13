@@ -702,7 +702,7 @@ def plot_topk_total_by_material(
         markerfacecolor="0.6",
         markeredgecolor="0.6",
         markersize=14,
-        label=f"< {min_samples} pipes",
+        label=f"Not representative (less than {min_samples} pipes)",
     )
 
     fig.legend(

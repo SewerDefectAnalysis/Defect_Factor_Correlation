@@ -2,7 +2,7 @@
 
 # Project overview
 
-This repository is part of a broader project that aims to analyze sewer deterioration at the defect level. The steps of this project are presented in the figure below. This repository corresponds to the data validation stage, highlighted in red in the figure.
+This repository is part of a broader project that aims to analyze sewer deterioration at the defect level. The steps of this project are presented in the figure below. This repository corresponds to the Defect-Factor Correlation stage, highlighted in red in the figure.
 
 ```mermaid
 %%{init: {'flowchart': {'nodeSpacing': 40, 'rankSpacing': 50}}}%%
@@ -11,37 +11,33 @@ flowchart LR
     A[Database Structure]:::data --> B[Validation<br/>Rules]:::validation
     B --> D[Defect Distribution<br/>Analysis]:::analysis
     D --> E[Defect-Factor<br/>Correlation]:::analysisP2
+    
 
-    %% Optional branch BELOW
-    subgraph optional_branch[ ]
+    subgraph boxE[ ]
         direction TB
-        C[Optional: Validation<br/>Report]:::optional
-    end
-    style optional_branch fill:none,stroke:none
-
-    %% Red box around E
-    subgraph stage1[ ]
         E
     end
- 
-    style stage1 stroke:#FF0000,stroke-width:3px,fill:none
+
+    C[Optional: Validation<br/>Report]:::optional
+
+    style boxE stroke:#FF0000,stroke-width:3px,fill:none
+
     B -.-> C
+
 
     %% Click links
     click A "https://github.com/SewerDefectAnalysis/Database_Structure"
     click B "https://github.com/SewerDefectAnalysis/Data_validation"
     click C "https://github.com/SewerDefectAnalysis/Data_validation"
     click D "https://github.com/SewerDefectAnalysis/Defect_description"
-    click E "https://github.com/SewerDefectAnalysis/Defect_Factor_Interaction"
+    click E "https://github.com/SewerDefectAnalysis/Defect_Factor_Correlation"
 
     %% Styles
-    classDef data fill:#E8F0FE,stroke:#1A73E8,stroke-width:1.8px
-    classDef validation fill:#E6F4EA,stroke:#188038,stroke-width:1.8px
-    classDef analysis fill:#F3E8FD,stroke:#9334E6,stroke-width:1.8px
-    classDef analysisP2 fill:#FDEBD0,stroke:#E67E22,stroke-width:1.8px
-    classDef prediction fill:#FEF7E0,stroke:#F9AB00,stroke-width:1.8px
-    classDef optional fill:#E6F4EA,stroke:#666666,stroke-width:1.8px,stroke-dasharray: 5 5
-
+    classDef data fill:#E8F0FE,stroke:#1A73E8
+    classDef validation fill:#E6F4EA,stroke:#188038
+    classDef analysis fill:#F3E8FD,stroke:#9334E6
+    classDef analysisP2 fill:#FDEBD0,stroke:#E67E22
+    classDef optional fill:#E6F4EA,stroke:#666666,stroke-dasharray: 5 5
 
 
 ```
@@ -160,8 +156,7 @@ These visualizations provide insights into how the selected factors influence de
 ## Citation
 If you use this repository in your research, please cite the corresponding paper:  
 
-González, M. A., Herrán, J., van Zyl, J. E., & Henning, T. F. P. (2026). Defect-Level Analysis: Investigating Relationships Between Influencing Factors and Defect Type for Sewer Networks. 
-
+_(Add citation)_
 
 ---
 ## License
