@@ -160,6 +160,7 @@ def type_defect_count_vs_factors(
         total_occ_total = pd.concat([total_occ_total, total_occ[valid_defects]])
 
     return rho_mat_total, pval_mat_total, signif_mat_total, reason_mat_total, total_occ_total, pipe_factors, counts_table
+from matplotlib.backends.backend_agg import FigureCanvasAgg
 
 def plot_correlation_heatmaps_all_factors(
     df: pd.DataFrame,
@@ -248,7 +249,7 @@ def plot_correlation_heatmaps_all_factors(
         return
 
     # ---------- 7) Layout ----------
-    ncols = 3
+    ncols = min(3, len(valid_materials))
     nrows = int(np.ceil(len(valid_materials) / ncols))
 
     fig, axes = plt.subplots(

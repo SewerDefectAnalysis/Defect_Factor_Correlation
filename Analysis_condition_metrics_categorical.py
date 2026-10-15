@@ -987,9 +987,12 @@ def plot_categorical_analysis_combined(
         plt.close(fig_heatmap)
         return None, df_pipes, epsilon_matrix
 
+    from matplotlib.backends.backend_agg import FigureCanvasAgg
+
     def figure_to_image(source_fig):
-        source_fig.canvas.draw()
-        return np.asarray(source_fig.canvas.buffer_rgba()).copy()
+        canvas = FigureCanvasAgg(source_fig)
+        canvas.draw()
+        return np.asarray(canvas.buffer_rgba()).copy()
 
     heatmap_image = figure_to_image(fig_heatmap)
     boxplots_image = figure_to_image(fig_boxplots)
